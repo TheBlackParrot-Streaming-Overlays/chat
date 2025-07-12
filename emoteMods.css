@@ -1,0 +1,9 @@
+.mod_Hidden {
+	display: none;
+}
+.mod_FlipH {
+	transform: rotateX(180deg);
+}
+.mod_FlipV {
+	transform: rotateY(180deg);
+}

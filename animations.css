@@ -1,0 +1,192 @@
+@keyframes userInfoInKF {
+	0% {
+		transform: translate3d(0px, 10px, 0px);
+	}
+
+	100% {
+		transform: translate3d(0px, 0px, 0px);
+	}
+}
+
+@keyframes fadeInKF {
+	from { opacity: 0%; }
+	to { opacity: 100%; }	
+}
+
+@keyframes fadeOutKF {
+	from { opacity: 100%; }
+	to { opacity: 0%; }	
+}
+
+:root {
+	--messageInOpacityStart: 0%;
+	--messageInOpacityEnd: 100%;
+	--messageInXTransformStart: 0vw;
+	--messageInXTransformEnd: 0vw;
+	--messageInYTransformStart: 3vh;
+	--messageInYTransformEnd: 0vh;
+	--messageInBlurStart: 4px;
+	--messageInBlurEnd: 0px;
+	--messageInScaleXStart: 90%;
+	--messageInScaleXEnd: 100%;
+	--messageInScaleYStart: 90%;
+	--messageInScaleYEnd: 100%;
+	--messageInSkewXStart: 0deg;
+	--messageInSkewXEnd: 0deg;
+	--messageInSkewYStart: 0deg;
+	--messageInSkewYEnd: 0deg;
+	--messageInRotateStart: 0deg;
+	--messageInRotateEnd: 0deg;
+	--messageInBrightnessStart: 100%;
+	--messageInBrightnessEnd: 100%;
+	--messageInContrastStart: 100%;
+	--messageInContrastEnd: 100%;
+	--messageInSaturateStart: 100%;
+	--messageInSaturateEnd: 100%;
+	--messageInHueRotateStart: 0deg;
+	--messageInHueRotateEnd: 0deg;
+
+	--messageOutOpacityStart: 100%;
+	--messageOutOpacityEnd: 0%;
+	--messageOutXTransformStart: 0vw;
+	--messageOutXTransformEnd: -100vw;
+	--messageOutYTransformStart: 0vh;
+	--messageOutYTransformEnd: 0vh;
+	--messageOutBlurStart: 0px;
+	--messageOutBlurEnd: 0px;
+	--messageOutScaleXStart: 100%;
+	--messageOutScaleXEnd: 100%;
+	--messageOutScaleYStart: 100%;
+	--messageOutScaleYEnd: 100%;
+	--messageOutSkewXStart: 0deg;
+	--messageOutSkewXEnd: 0deg;
+	--messageOutSkewYStart: 0deg;
+	--messageOutSkewYEnd: 0deg;
+	--messageOutRotateStart: 0deg;
+	--messageOutRotateEnd: 0deg;
+	--messageOutBrightnessStart: 100%;
+	--messageOutBrightnessEnd: 100%;
+	--messageOutContrastStart: 100%;
+	--messageOutContrastEnd: 100%;
+	--messageOutSaturateStart: 100%;
+	--messageOutSaturateEnd: 100%;
+	--messageOutHueRotateStart: 0deg;
+	--messageOutHueRotateEnd: 0deg;
+
+	--animationsInDuration: 0.5s;
+	--animationsOutDuration: 0.75s;
+	--animationsInOriginPoint: center center;
+	--animationsOutOriginPoint: left center;
+	--animationsInTimingFunc: var(--timingFuncEaseInOutCubic);
+	--animationsOutTimingFunc: var(--timingFuncEaseInBack);
+
+	--messageInTranslate3dFunctionStart: translate3d(var(--messageInXTransformStart), var(--messageInYTransformStart), 0px);
+	--messageInTranslate3dFunctionEnd: translate3d(var(--messageInXTransformEnd), var(--messageInYTransformEnd), 0px);
+	--messageOutTranslate3dFunctionStart: translate3d(var(--messageOutXTransformStart), var(--messageOutYTransformStart), 0px);
+	--messageOutTranslate3dFunctionEnd: translate3d(var(--messageOutXTransformEnd), var(--messageOutYTransformEnd), 0px);
+	--messageInTranslate2dFunctionStart: translate(var(--messageInXTransformStart), var(--messageInYTransformStart));
+	--messageInTranslate2dFunctionEnd: translate(var(--messageInXTransformEnd), var(--messageInYTransformEnd));
+	--messageOutTranslate2dFunctionStart: translate(var(--messageOutXTransformStart), var(--messageOutYTransformStart));
+	--messageOutTranslate2dFunctionEnd: translate(var(--messageOutXTransformEnd), var(--messageOutYTransformEnd));
+	--currentMessageInTranslateFunctionStart: var(--messageInTranslate3dFunctionStart);
+	--currentMessageInTranslateFunctionEnd: var(--messageInTranslate3dFunctionEnd);
+	--currentMessageOutTranslateFunctionStart: var(--messageOutTranslate3dFunctionStart);
+	--currentMessageOutTranslateFunctionEnd: var(--messageOutTranslate3dFunctionEnd);
+
+	--messageInFilterFunctionsStart: "";
+	--messageInFilterFunctionsEnd: "";
+	--messageOutFilterFunctionsStart: "";
+	--messageOutFilterFunctionsEnd: "";
+
+	--messageInTransformFunctionsStart: "";
+	--messageInTransformFunctionsEnd: "";
+	--messageOutTransformFunctionsStart: "";
+	--messageOutTransformFunctionsEnd: "";
+
+	--zoomAvatarBGOutAmount: -10%;
+}
+
+@keyframes messageInKF {
+	0% {
+		opacity: var(--messageInOpacityStart);
+		transform: var(--messageInTransformFunctionsStart);
+		filter: var(--messageInFilterFunctionsStart);
+	}
+
+	100% {
+		opacity: var(--messageInOpacityEnd);
+		transform: var(--messageInTransformFunctionsEnd);
+		filter: var(--messageInFilterFunctionsEnd);
+	}
+}
+
+@keyframes messageOutKF {
+	0% {
+		opacity: var(--messageOutOpacityStart);
+		transform: var(--messageOutTransformFunctionsStart);
+		filter: var(--messageOutFilterFunctionsStart);
+	}
+
+	100% {
+		opacity: var(--messageOutOpacityEnd);
+		transform: var(--messageOutTransformFunctionsEnd);
+		filter: var(--messageOutFilterFunctionsEnd);
+	}
+}
+
+.slideIn {
+	animation-name: messageInKF;
+	animation-duration: var(--animationsInDuration);
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-timing-function: var(--animationsInTimingFunc);
+	transform-origin: var(--animationsInOriginPoint);
+}
+.slideOut {
+	animation-name: messageOutKF;
+	animation-duration: var(--animationsOutDuration);
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-timing-function: var(--animationsOutTimingFunc);
+	transform-origin: var(--animationsOutOriginPoint);
+}
+.userInfoIn {
+	animation-name: userInfoInKF;
+	animation-duration: var(--animationsInDuration);
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+.justFadeIn {
+	animation-name: fadeInKF;
+	animation-duration: var(--animationsInDuration);
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+
+@keyframes zoomAvatarBGOutKF {
+	0% {
+		-webkit-transform: translateX(var(--zoomAvatarBGOutAmount));
+		opacity: 0%;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		opacity: 100%;
+	}
+}
+
+.zoomAvatarBGOut {
+	animation-name: zoomAvatarBGOutKF;
+	animation-delay: var(--avatarsBGAnimationDelay);
+	animation-duration: var(--avatarsBGAnimationDuration);
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-timing-function: var(--avatarsBGAnimationTimingFunc);
+}
+
+@keyframes speen {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}

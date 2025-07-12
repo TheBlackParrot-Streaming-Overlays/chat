@@ -1,0 +1,319 @@
+:root {
+	--overlayWidthActual: 700px;
+	--overlayWidth: 100%;
+
+	--shadowStuff: url(#shadowEffect);
+	--overlayShadowColor: #000000;
+	--outlineStuff: url(#outlineEffect);
+	--overlayOutlineColor: #000000;
+
+	--effectFilters: var(--outlineStuff) var(--shadowStuff);
+
+	--backgroundColor: transparent;
+	--highlightBackgroundColor: rgba(255, 255, 204, 1);
+	--highlightBorderColor: rgba(255, 255, 255, 1);
+	--highlightGlowRadius: 3px;
+
+	--defaultNameColor: rgba(170, 170, 170, 1);
+	--defaultNameColorSecondary: rgba(255, 255, 255, 1);
+	--nameFont: "Manrope";
+	--nameFontSize: 16pt;
+	--nameFontWeight: 900;
+	--nameFontStyle: normal;
+	--nameLetterSpacing: 1px;
+	--nameTransform: uppercase;
+	--nameVariant: normal;
+	--nameGradientAngle: 170deg;
+	--nameFontWeightExtra: 1.2px;
+	--nameBackgroundDefault: linear-gradient(var(--nameGradientAngle), var(--defaultNameColorSecondary) 0%, transparent 75%);
+	--nameBackgroundNoGradientDefault: var(--defaultNameColor);
+	--nameBackground: var(--nameBackgroundDefault);
+
+	--userInfoBackgroundColor: transparent;
+	--userInfoPaddingVertical: 0px;
+	--userInfoPaddingHorizontal: 0px;
+	--userInfoBorderRadius: 0px;
+	--userInfoOutlineColor: rgba(255, 255, 255, 1);
+	--userInfoOutlineSize: 0px;
+	--userInfoOutlineSizeActual: 1px;
+	--userInfoOutlineStyle: solid;
+	--userInfoOutline: none;
+	--userInfoBottomMargin: 0px;
+	--userInfoElementDirection: row;
+
+	--messageColor: rgba(255, 255, 255, 1);
+	--messageFont: "Manrope";
+	--messageFontSize: 16pt;
+	--messageFontWeight: 700;
+	--messageLetterSpacing: 0px;
+	--messageLineHeight: 30px;
+	--messageUserInfoElementSpacing: 14px;
+	--messageUserInfoElementSpacingBackwards: 0px;
+	--messageUserInfoElementSpacingForwards: var(--messageUserInfoElementSpacing);
+	--messageTransform: none;
+	--messageBoldAmount: 1.25px;
+	--messageSeparatorColor: #ffffff20;
+	--messageSeparatorWidthActual: 1px;
+	--messageSeparatorWidth: 0px;
+	--messageSeparatorSpacingActual: 0px;
+	--messageSeparatorSpacing: 0px;
+	--messageSeparatorStyle: solid;
+	--messageFontStyle: normal;
+	--messageBackgroundColor: transparent;
+	--messagePaddingVertical: 0px;
+	--messagePaddingHorizontal: 0px;
+	--messageBorderRadius: 0px;
+	--messageDeletedOpacity: 0.67;
+
+	--messageOutlineColor: rgba(255, 255, 255, 1);
+	--messageOutlineSize: 0px;
+	--messageOutlineSizeActual: 1px;
+	--messageOutlineStyle: solid;
+	--messageOutline: none;
+
+	--chatBlockPaddingVertical: 18px;
+	--chatBlockPaddingHorizontal: 18px;
+	--chatBlockSpacing: 20px;
+	--chatBlockIndividualPaddingVertical: 0px;
+	--chatBlockIndividualPaddingHorizontal: 0px;
+	--chatBlockBorderRadius: 0px;
+	--chatBlockWidth: -webkit-fill-available;
+
+	--chatBlockOutlineColor: rgba(255, 255, 255, 1);
+	--chatBlockOutlineSize: 0px;
+	--chatBlockOutlineSizeActual: 1px;
+	--chatBlockOutlineStyle: solid;
+	--chatBlockOutline: none;
+
+	--bigEmoteSize: 48pt;
+	--bigEmoteMargin: 0px;
+	--emoteBorderRadius: 0px;
+	--bigEmoteMarginVertical: 4px;
+	--bigEmoteMaxLines: 1em;
+	--emoteInlineVerticalOffset: 0.16em;
+	--gigantifiedScalar: 2.5;
+
+	--timingFuncLinear: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+	--timingFuncEase: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+	--timingFuncEaseIn: cubic-bezier(0.42, 0, 1.0, 1.0);
+	--timingFuncEaseInSine: cubic-bezier(0.12, 0, 0.39, 0);
+	--timingFuncEaseInQuad: cubic-bezier(0.11, 0, 0.5, 0);
+	--timingFuncEaseInCubic: cubic-bezier(0.32, 0, 0.67, 0);
+	--timingFuncEaseInQuart: cubic-bezier(0.5, 0, 0.75, 0);
+	--timingFuncEaseInQuint: cubic-bezier(0.64, 0, 0.78, 0);
+	--timingFuncEaseInExpo: cubic-bezier(0.7, 0, 0.84, 0);
+	--timingFuncEaseInCirc: cubic-bezier(0.55, 0, 1, 0.45);
+	--timingFuncEaseInBack: cubic-bezier(0.36, 0, 0.66, -0.56);
+	--timingFuncEaseOut: cubic-bezier(0, 0, 0.58, 1.0);
+	--timingFuncEaseOutSine: cubic-bezier(0.61, 1, 0.88, 1);
+	--timingFuncEaseOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
+	--timingFuncEaseOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+	--timingFuncEaseOutQuart: cubic-bezier(0.25, 1, 0.5, 1);
+	--timingFuncEaseOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
+	--timingFuncEaseOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+	--timingFuncEaseOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
+	--timingFuncEaseOutBack: cubic-bezier(0.34, 1.56, 0.64, 1);
+	--timingFuncEaseInOut: cubic-bezier(0.42, 0, 0.58, 1.0);
+	--timingFuncEaseInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+	--timingFuncEaseInOutQuad: cubic-bezier(0.45, 0, 0.55, 1);
+	--timingFuncEaseInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+	--timingFuncEaseInOutQuart: cubic-bezier(0.76, 0, 0.24, 1);
+	--timingFuncEaseInOutQuint: cubic-bezier(0.83, 0, 0.17, 1);
+	--timingFuncEaseInOutExpo: cubic-bezier(0.87, 0, 0.13, 1);
+	--timingFuncEaseInOutCirc: cubic-bezier(0.85, 0, 0.15, 1);
+	--timingFuncEaseInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+	--bsrInfoDirection: ltr;
+
+	--avatarSize: 34px;
+	--avatarBorderRadius: 10px;
+
+	--avatarsBGSize: 150px;
+	--avatarsBGHorizontalPadding: 5px;
+	--avatarsBGVerticalPadding: 5px;
+	--avatarsBGBorderRadius: 8px;
+	--avatarsBGStartOpacity: 1;
+	--avatarsBGEndOpacity: 0;
+	--avatarsBGStartFadeAt: -50%;
+	--avatarsBGEndFadeAt: 50%;
+	--avatarsBGFadeAngle: 110deg;
+	--avatarsBGBlurAmount: 0px;
+	--avatarsBGBorderColor: #ffffff40;
+	--avatarsBGBorderSize: 0px;
+	--avatarsBGBorderSizeActual: 1px;
+	--avatarsBGBorderStyle: solid;
+	--avatarsBGBorderOffset: 0px;
+
+	--badgeBorderRadius: 4px;
+	--subBadgeBorderRadius: var(--badgeBorderRadius);
+	--badgeSize: 22px;
+	--badgeGradientDisplay: none;
+	--badgeGradientColorStart: #555555ff;
+	--badgeGradientColorEnd: #000000ff;
+	--badgeGradientAngle: 0deg;
+	--badgeGradientStart: 0%;
+	--badgeGradientEnd: 100%;
+	--badgeGradientBlendMode: screen;
+
+	--badgeBorderColor: #ffffff50;
+	--badgeBorderSize: 0px;
+	--badgeBorderSizeActual: 1px;
+	--badgeBorderStyle: solid;
+	--badgeBorder: none;
+
+	--affiliateBadgeColor: #2d3540;
+	--botBadgeColor: #555b59;
+
+	--pronounsColor: rgba(128, 128, 128, 1);
+	--pronounsColorSecondary: rgba(255, 255, 255, 1);
+	--pronounsGradientAngle: 170deg;
+	--pronounsGradient: linear-gradient(var(--pronounsGradientAngle), var(--pronounsColorSecondary) -20%, transparent 100%);
+	--pronounsFont: "Manrope";
+	--pronounsFontSize: 12pt;
+	--pronounsFontWeight: 900;
+	--pronounsFontWeightExtra: 0.5px;
+	--pronounsLetterSpacing: 0px;
+	--pronounsTransform: uppercase;
+	--pronounsFontStyle: normal;
+
+	--flagsBorderRadius: 4px;
+	--flagsSize: 22px;
+	--flagsSpacing: 2px;
+	--flagsContainerDisplay: flex;
+
+	--timestampColor: rgba(128, 128, 128, 1);
+	--timestampColorSecondary: rgba(255, 255, 255, 1);
+	--timestampGradientAngle: 170deg;
+	--timestampGradient: linear-gradient(var(--timestampGradientAngle), var(--timestampColorSecondary) -20%, transparent 100%);
+	--timestampFont: "Manrope";
+	--timestampFontSize: 12pt;
+	--timestampFontWeight: 900;
+	--timestampFontWeightExtra: 0.5px;
+	--timestampLetterSpacing: 0px;
+	--timestampPadding: 10px;
+	--timestampFontStyle: normal;
+
+	--highlightedEffect: drop-shadow(0px 0px var(--highlightGlowRadius) var(--highlightBackgroundColor));
+
+	--chatHistoryOriginPoint: center center;
+
+	--eventTagsColor: #FFFFFFFF;
+	--eventTagsFont: "Manrope";
+	--eventTagsFontSize: 14pt;
+	--eventTagsFontWeight: 900;
+	--eventTagsFontWeightExtra: 0.7px;
+	--eventTagsLetterSpacing: -0.2px;
+	--eventTagsTransform: uppercase;
+	--eventTagsLineHeight: 26px;
+	--eventTagsFontStyle: normal;
+
+	--internationalNameSaturation: 33%;
+	--internationalNameMargin: 7px;
+	--internationalNameSize: 75%;
+	--internationalNameWeightScaling: 0.5;
+
+	--gradientFadeMaskAngle: 0deg;
+	--gradientFadeMaskStart: 67%;
+	--gradientFadeMaskEnd: 99%;
+
+	--messageBlockDirection: column;
+
+	--messageOffsetHorizontal: 0px;
+	--messageOffsetVertical: 0px;
+	--userInfoOffsetVertical: 0px;
+	--userInfoOffsetHorizontal: 0px;
+
+	--display7TVBadges: initial;
+	--displayFFZBadges: initial;
+	--displayBTTVBadges: initial;
+	--displayAffiliateBadges: initial;
+	--displayBotBadges: initial;
+
+	--replyScale: 0.6;
+	--replyFontSize: calc(var(--messageFontSize) * (var(--replyScale) + 0.07));
+	--replyOpacity: 0.6;
+	--replyElementSpacing: 6px;
+	--replyIconSpacing: 10px;
+	--replyBlockSpacing: 0px;
+	--replyIndentation: 10px;
+	--replyFontStyle: normal;
+	--replyIconVerticalOffset: 2px;
+	--replyMaxWidth: 512px;
+
+	--BSRDurationVisibility: inline-block;
+	--BSRAgeVisibility: inline-block;
+	--BSRRatingVisibility: inline-block;
+	--BSRRatingPercentageVisibility: inline;
+	--BSRStatsPanelVisibility: flex;
+	--BSRCodeVisibility: inline-block;
+	--BSRStatsPanelFontVariant: normal;
+	--BSRInfoElementsWidthValue: calc(var(--overlayWidth) - calc(var(--chatBlockPaddingHorizontal) * 2) - (var(--messageFontSize) * 5));
+	--BSRInfoElementsWidth: var(--BSRInfoElementsWidthValue);
+	--BSRMapArtBorderRadius: 4px;
+	--BSRMapCodeBorderRadius: 4px;
+	--BSRMapCodeBGAngle: 170deg;
+	--BSRMapCodeBGColor1: #333333;
+	--BSRMapCodeBGColor2: #000000;
+	--BSRMapCodeFGColor: #ffffff;
+	--BSRMapCoverArtDisplay: inline-block;
+	--BSRMapCodeFont: "Manrope";
+	--BSRMapCodeFontStyle: normal;
+	--BSRMapCodeFontVariant: normal;
+	--BSRMapCodeFontSize: 12pt;
+	--BSRMapCodeFontWeight: 900;
+	--BSRMapCodeCharacterSpacing: 0px;
+	--BSRMapCodeFontWeightExtra: 0.2px;
+	--BSRMapCodeFontActual: inherit;
+	--BSRMapCodeFontStyleActual: inherit;
+	--BSRMapCodeFontVariantActual: inherit;
+	--BSRMapCodeFontSizeActual: inherit;
+	--BSRMapCodeFontWeightActual: inherit;
+	--BSRMapCodeCharacterSpacingActual: inherit;
+	--BSRMapCodeFontWeightExtraActual: inherit;
+	--BSRMapCodeVerticalOffset: 0px;
+
+	--sharedChatAvatarDisplay: flex;
+	--sharedChatAvatarSize: 20px;
+	--sharedChatAvatarBorderRadius: 4px;
+	--sharedChatAvatarOffset: 0px;
+	--sharedChatAvatarBrightness: 135%;
+	--sharedChatAvatarContrast: 107%;
+	--sharedChatAvatarSaturation: 0%;
+	--sharedChatAvatarFilters: saturate(var(--sharedChatAvatarSaturation));
+
+	--sharedChatSameRoomBorderSize: 2px;
+	--sharedChatSameRoomBorderStyle: solid;
+	--sharedChatSameRoomBorderColor: #9146FF;
+	--sharedChatSameRoomBorderOffset: 2px;
+	--sharedChatSameRoomBorderSizeActual: var(--sharedChatSameRoomBorderSize);
+
+	--chatPerspectiveTransform: none;
+	--chatPerspective2DTranslatePart: translate(var(--chatPerspectivePreTranslateX), var(--chatPerspectivePreTranslateY));
+	--chatPerspective3DTranslatePart: translate3d(var(--chatPerspectivePostTranslateX), var(--chatPerspectivePostTranslateY), var(--chatPerspectivePostTranslateZ));
+	--chatPerspectiveRotationPart: perspective(var(--chatPerspectiveDistance)) rotateX(var(--chatPerspectiveRotX)) rotateY(var(--chatPerspectiveRotY)) rotateZ(var(--chatPerspectiveRotZ));
+	--chatPerspectiveTransformActual: var(--chatPerspective2DTranslatePart) var(--chatPerspectiveRotationPart) var(--chatPerspective3DTranslatePart);
+	--chatPerspectiveDistance: 30cm;
+	--chatPerspectiveOriginPointX: bottom;
+	--chatPerspectiveOriginPointY: left;
+	--chatPerspectiveRotX: 0deg;
+	--chatPerspectiveRotY: 15deg;
+	--chatPerspectiveRotZ: 0deg;
+	--chatPerspectivePreTranslateX: 0mm;
+	--chatPerspectivePreTranslateY: 0mm;
+	--chatPerspectivePostTranslateX: 0mm;
+	--chatPerspectivePostTranslateY: 0mm;
+	--chatPerspectivePostTranslateZ: 0mm;
+
+	--elementFlowDisplay: block; /* flex */
+	--elementFlowUserBlockFlexValue: 1; /* unset */
+	--elementFlowMessageSpacingValue: 8px;
+	--elementFlowMessageSpacing: unset; /* var(--elementFlowMessageSpacingValue) */
+	--elementFlowViewerInfoWidthValue: 300px;
+	--elementFlowViewerInfoWidth: unset; /* var(--elementFlowViewerInfoWidthValue) */
+	--elementFlowViewerInfoAlignment: unset; /* end */
+	--elementFlowViewerInfoAlignmentOpposite: unset;
+	--elementFlowViewerInfoVerticalAlignmentValue: center;
+	--elementFlowViewerInfoVerticalAlignment: unset; /* var(--elementFlowViewerInfoVerticalAlignmentValue) */
+	--elementFlowHorizontalAlignmentValue: row;
+	--elementFlowHorizontalAlignment: unset; /* var(--elementFlowHorizontalAlignmentValue) */
+}

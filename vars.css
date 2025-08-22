@@ -127,6 +127,7 @@
 
 	--avatarSize: 34px;
 	--avatarBorderRadius: 10px;
+	--avatarDisplay: initial;
 
 	--avatarsBGSize: 150px;
 	--avatarsBGHorizontalPadding: 5px;

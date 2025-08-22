@@ -281,6 +281,7 @@ tt, code, pre {
 }
 
 .pfp {
+	display: var(--avatarDisplay);
 	width: var(--avatarSize);
 	min-width: var(--avatarSize);
 	max-width: var(--avatarSize);

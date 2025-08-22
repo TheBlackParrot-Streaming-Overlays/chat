@@ -1526,6 +1526,10 @@ const settingUpdaters = {
 	},
 	chatBSRMapCodeVerticalOffset: function(value) {
 		rootCSS().setProperty("--BSRMapCodeVerticalOffset", `${value}px`);
+	},
+
+	enableAvatars: function(value) {
+		rootCSS().setProperty("--avatarDisplay", (value === "true" ? "initial" : "none"));
 	}
 };
 settingUpdaters["chatHideAccounts"](localStorage.getItem("setting_chatHideAccounts"));

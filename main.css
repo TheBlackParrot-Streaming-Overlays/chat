@@ -480,7 +480,7 @@ tt, code, pre {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: calc(100vw - calc(var(--chatBlockPaddingHorizontal) * 2));
+	width: var(--clipWidthValue);
 }
 
 .bsrMapInfo div {

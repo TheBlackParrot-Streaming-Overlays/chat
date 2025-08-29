@@ -681,6 +681,11 @@ const settingUpdaters = {
 	},
 
 	overlayForceWidth: function(value) {
+		const isTraditional = (localStorage.getItem("setting_chatOverlayIsTraditional") === "true");
+		if(!isTraditional) {
+			rootCSS().setProperty("--clipWidthValue", (value === "true" ? "var(--clipWidthForcedWidthValue)" : "var(--clipWidthStandardValue)"));
+		}
+
 		rootCSS().setProperty("--overlayWidth", (value === "true" ? "var(--overlayWidthActual)" : "100vw"));
 	},
 	overlayWidth: function(value) {
@@ -1460,9 +1465,13 @@ const settingUpdaters = {
 	},
 	elementFlowForceMoreTradition: function(value) {
 		const isTraditional = (localStorage.getItem("setting_chatOverlayIsTraditional") === "true");
+		const forceMoreTradition = (localStorage.getItem("setting_elementFlowForceMoreTradition") === "true");
+		const overlayForceWidth = (localStorage.getItem("setting_overlayForceWidth") === "true");
+
 		rootCSS().setProperty("--elementFlowViewerInfoWidth", (value === "true" && isTraditional ? "var(--elementFlowViewerInfoWidthValue)" : "unset"));
 		rootCSS().setProperty("--elementFlowViewerInfoAlignment", (value === "true" && isTraditional ? "end" : "unset"));
 		rootCSS().setProperty("--elementFlowViewerInfoAlignmentOpposite", (value === "true" && isTraditional ? "start" : "unset"));
+		rootCSS().setProperty("--clipWidthValue", (value === "true" && isTraditional && forceMoreTradition ? "var(--clipWidthTraditionalValue)" : (overlayForceWidth ? "var(--clipWidthForcedWidthValue)" : "var(--clipWidthStandardValue)")));
 	},
 	chatOverlayViewerInfoWidth: function(value) {
 		rootCSS().setProperty("--elementFlowViewerInfoWidthValue", `${value}px`);

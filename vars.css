@@ -317,4 +317,9 @@
 	--elementFlowViewerInfoVerticalAlignment: unset; /* var(--elementFlowViewerInfoVerticalAlignmentValue) */
 	--elementFlowHorizontalAlignmentValue: row;
 	--elementFlowHorizontalAlignment: unset; /* var(--elementFlowHorizontalAlignmentValue) */
+
+	--clipWidthStandardValue: calc(100vw - calc(var(--chatBlockPaddingHorizontal) * 2));
+	--clipWidthTraditionalValue: var(--elementFlowViewerInfoWidthValue);
+	--clipWidthForcedWidthValue: var(--overlayWidthActual);
+	--clipWidthValue: var(--clipWidthStandardValue);
 }

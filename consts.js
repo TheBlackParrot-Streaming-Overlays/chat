@@ -1,5 +1,5 @@
-const overlayRevision = 88;
-const overlayRevisionTimestamp = 1756970934557;
+const overlayRevision = 89;
+const overlayRevisionTimestamp = 1766046981870;
 
 const enums = {
 	weight: {
@@ -161,6 +161,7 @@ const badgeOrder = {
 	partner: -7,
 	"twitch-dj": -7,
 	global_mod: -6,
+	lead_moderator: -5,
 	moderator: -5,
 	vip: -5,
 	affiliate: -4,

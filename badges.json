@@ -1,6 +1,6 @@
 {
 	"role": {
-		"badges": ["artist-badge", "broadcaster", "extension", "moderator", "vip"],
+		"badges": ["artist-badge", "broadcaster", "extension", "moderator", "vip", "lead_moderator"],
 		"setting": "enableTwitchRoleBadges",
 		"is_solid": true
 	},

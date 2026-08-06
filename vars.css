@@ -309,8 +309,10 @@
 	--elementFlowUserBlockFlexValue: 1; /* unset */
 	--elementFlowMessageSpacingValue: 8px;
 	--elementFlowMessageSpacing: unset; /* var(--elementFlowMessageSpacingValue) */
+	--elementFlowMessageSpacingForcePixels: 0px;
 	--elementFlowViewerInfoWidthValue: 300px;
 	--elementFlowViewerInfoWidth: unset; /* var(--elementFlowViewerInfoWidthValue) */
+	--elementFlowViewerInfoWidthForcePixels: 0px;
 	--elementFlowViewerInfoAlignment: unset; /* end */
 	--elementFlowViewerInfoAlignmentOpposite: unset;
 	--elementFlowViewerInfoVerticalAlignmentValue: center;

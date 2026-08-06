@@ -310,7 +310,10 @@ tt, code, pre {
 	display: flex;
 	flex-wrap: wrap;
 	color: var(--messageColor);
-	width: calc(100% - 1px); /* bruh */
+	width: 100%;
+	/*
+	width: calc(100% - 1px);
+	*/
 }
 
 .loading {
@@ -346,7 +349,7 @@ tt, code, pre {
 	justify-content: space-evenly;
 	height: calc(var(--messageFontSize) * 4);
 	margin-top: 2px;
-	width: calc(100vw - var(--elementFlowViewerInfoWidth) - calc(var(--messageFontSize) * 6) - calc(var(--messageFontSize) / 1.75) - var(--elementFlowMessageSpacing) - 1px);
+	width: calc(100vw - var(--elementFlowViewerInfoWidthForcePixels) - calc(var(--messageFontSize) * 6) - calc(var(--messageFontSize) / 1.75) - var(--elementFlowMessageSpacingForcePixels) - 1px);
 }
 
 .songTitle {

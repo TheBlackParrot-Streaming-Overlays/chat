@@ -1454,6 +1454,7 @@ const settingUpdaters = {
 		rootCSS().setProperty("--elementFlowDisplay", (value === "true" ? "flex" : "block"));
 		rootCSS().setProperty("--elementFlowUserBlockFlexValue", (value === "true" ? "unset" : 1));
 		rootCSS().setProperty("--elementFlowMessageSpacing", (value === "true" ? "var(--elementFlowMessageSpacingValue)" : "unset"));
+		rootCSS().setProperty("--elementFlowMessageSpacingForcePixels", (value === "true" ? "var(--elementFlowMessageSpacingValue)" : "0px"));
 		rootCSS().setProperty("--elementFlowViewerInfoVerticalAlignment", (value === "true" ? "var(--elementFlowViewerInfoVerticalAlignmentValue)" : "unset"));
 		rootCSS().setProperty("--elementFlowHorizontalAlignment", (value === "true" ? "var(--elementFlowHorizontalAlignmentValue)" : "unset"));
 		rootCSS().setProperty("--BSRInfoElementsWidth", (value === "true" ? "unset" : "var(--BSRInfoElementsWidthValue)"));
@@ -1469,6 +1470,7 @@ const settingUpdaters = {
 		const overlayForceWidth = (localStorage.getItem("setting_overlayForceWidth") === "true");
 
 		rootCSS().setProperty("--elementFlowViewerInfoWidth", (value === "true" && isTraditional ? "var(--elementFlowViewerInfoWidthValue)" : "unset"));
+		rootCSS().setProperty("--elementFlowViewerInfoWidthForcePixels", (value === "true" && isTraditional ? "var(--elementFlowViewerInfoWidthValue)" : "0px"));
 		rootCSS().setProperty("--elementFlowViewerInfoAlignment", (value === "true" && isTraditional ? "end" : "unset"));
 		rootCSS().setProperty("--elementFlowViewerInfoAlignmentOpposite", (value === "true" && isTraditional ? "start" : "unset"));
 		rootCSS().setProperty("--clipWidthValue", (value === "true" && isTraditional && forceMoreTradition ? "var(--clipWidthTraditionalValue)" : (overlayForceWidth ? "var(--clipWidthForcedWidthValue)" : "var(--clipWidthStandardValue)")));
